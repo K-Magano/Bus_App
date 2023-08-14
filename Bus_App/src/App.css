@@ -1,0 +1,126 @@
+
+
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.App_Nav{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width:100%;
+  margin-right: 100%;
+  background-color:lightgreen;
+  
+}
+.App_Link{
+   display: flex;
+  ; 
+    }
+.App_Nav_Link{
+  display:flex;
+ 
+  justify-content: space-between;
+  
+  padding: 9px;
+  margin: 10px;
+  ;
+}
+.Home_Button_Container{
+  display: flex;
+  justify-content: space-between;
+}
+.Home_Buttons{
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px;
+  margin: 10px;
+    
+
+}
+
+.Create_Form{
+
+ 
+  padding: 20px;
+  margin: 20px;
+  background-color: aquamarine;
+
+}
+
+.Create_Input{
+  background-color: grey;
+  border: none;
+  border-radius: 5px;
+  margin:15px;
+  padding:10px;
+  cursor: pointer;
+}
+
+/*Buttons color :
+ hover color:
+ not Hover: Dark Green*/
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.Table_Header{
+  background-color: Pink;
+  border: solid 1px #eee;
+  
+}
+
+.Table_Body{
+  background-color: lightblue;
+  width: 100%;
+  padding: 2%;
+  border:  solid 1px ;
+  ;
+  
+
+}
+.Table_content{
+  background-color: aquamarine;
+  border-bottom:  solid 1px; 
+  padding: 50px;
+
+}
