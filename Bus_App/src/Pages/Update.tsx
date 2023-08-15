@@ -8,15 +8,17 @@ const Update  =() => {
    const navigate = useNavigate()
 
    const [name, setName] = useState('')
+   const [last_name, setLast_name] = useState('')
    const [village, setVillage] = useState('')
    const [lekgotla, setLekgotla] = useState('')
    const [id_number, setId_number]= useState('')
+   const [contact_number, setContact_number]= useState('')
    const [formError, setFormError] = useState('')
 
    const handleSubmit = async (e: React. FormEvent) =>{
     e.preventDefault()
 
-    if (!name || !village || !lekgotla || !id_number  ) {
+    if (!name || !last_name ||  !village || !lekgotla || !id_number  || !contact_number   ) {
       setFormError("Please fill in all required fields")
       return
   }
@@ -24,7 +26,7 @@ const Update  =() => {
   try {
     const {data, error} =  await supabase
     .from ('Passenger')
-    .update({name, village, lekgotla, id_number})
+    .update({name, last_name, village, lekgotla, id_number, contact_number})
     .eq('id',id)
     .single()
 
@@ -35,7 +37,7 @@ const Update  =() => {
 
     if (data) {
       setFormError(null)
-      navigate('/')
+      navigate('/', {replace: true} )
     }
 
    } catch (error){
@@ -54,20 +56,22 @@ const Update  =() => {
       .single()
 
       if(error){
-           navigate("/", {replace: true})
+           navigate('/', {replace: true})
           
       }
 
       if (data){
        setName(data.name)
+       setLast_name(data.last_name)
        setVillage(data.village)
        setLekgotla(data.lekgotla)
        setId_number(data.id_number)
+       setContact_number(data.contact_number)
       }
        
       } catch (error){
         console.error(error)
-        navigate("/",{replace: true})
+        navigate('/',{replace: true})
     }
   }
     fetchPassenger()
@@ -84,6 +88,15 @@ const Update  =() => {
         id="name"
         value={name}
         onChange={(e)=> setName(e.target.value)} 
+        />
+
+
+        <label htmlFor="name">Last Name:</label>
+        <input 
+        type="text"
+        id="last_name"
+        value={last_name}
+        onChange={(e)=> setLast_name(e.target.value)} 
         />
 
         <label htmlFor="village">Village:</label>
@@ -107,7 +120,14 @@ const Update  =() => {
             value={id_number}
             onChange={(e)=> setId_number(e.target.value)}/>
 
-            <button>Update New Person details</button>
+<label htmlFor="id_number">Contact Number:</label>
+            <input
+            type="text"
+            id="contact_number"
+            value={contact_number}
+            onChange={(e)=> setContact_number(e.target.value)}/>
+
+            <button onClick={handleSubmit}>Update New Person details</button>
                 {formError && <p>{formError}</p>}
         </form>
     </div>

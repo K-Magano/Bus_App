@@ -1,60 +1,61 @@
-
-import {Link} from "react-router-dom"
-import supabase from "../confiig/SupabaseClient"
-
+import { Link } from "react-router-dom";
+import supabase from "../confiig/SupabaseClient";
 
 interface PassengerProps {
-  passenger:{
-    id:number;
-  name:string;
-  village:string;
-  id_number: string
-  lekgotla: string}
-  
+  passenger: {
+    id: number;
+    name: string;
+    last_name: string;
+    village: string;
+    lekgotla: string;
+    id_number: string;
+    contact_number: string;
+  };
 
-onDelete:(id: number) => void
+  onDelete: (id: number) => void;
 }
 
-const Passenger = ({passenger, onDelete}: PassengerProps) => {
-
+const PassengerCard = ({ passenger, onDelete }: PassengerProps) => {
   const handleDelete = async () => {
     try {
-   const {data, error} = await supabase
-       .from('Passenger')
-       .delete()
-       .eq('id', passenger.id)
+      const { data, error } = await supabase
+        .from("Passenger")
+        .delete()
+        .eq("id", passenger.id);
 
-       if (error) {
-        console.log(error)
-    
-  }
-  if(data){
-    console.log(data)
-    onDelete(passenger.id)
-  }
-} catch (error){
-  console.log(error)
-}
-}
+      if (error) {
+        console.log(error);
+      }
+      if (data) {
+        console.log(data);
+        onDelete(passenger.id);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
-    <div>
- 
-      <h3>{passenger.name}</h3>
-      <p>{passenger.village}</p>
-      <p>{passenger.id_number}</p>
-      <p>{passenger.lekgotla}</p>
-      <div>
-        <Link to ={"/"+ passenger.id}>
-          Edit
-        </Link>
-        <br></br>
-        <button onClick={handleDelete}>Delete</button>
+  
+<tr key={passenger.id} className="Table_content">
+        <td>{passenger.name}</td>
+        <td>{passenger.last_name}</td>
+        <td>{passenger.lekgotla}</td>
+        <td>{passenger.village}</td>
+        <td>{passenger.contact_number}</td>
+        <td>{passenger.id_number}</td>
+        <td>
+          <Link to={"/" + passenger.id}>Edit</Link>
+        </td>
+        <td>
+          {" "}
+          <button onClick={handleDelete}>Delete</button>
+        </td>
+      </tr>
 
-      </div>
      
-    
-    </div>
-  )
-}
 
-export default Passenger
+  );
+};
+
+
+export default PassengerCard;

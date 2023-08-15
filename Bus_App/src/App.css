@@ -103,24 +103,21 @@
   color: #888;
 }
 
+.Table {
+  background-color: #888;
+  width: 100%;
+  border:  solid 1px ;
+  table-layout: fixed;  
+    
+}
+
 .Table_Header{
   background-color: Pink;
-  border: solid 1px #eee;
   
 }
 
-.Table_Body{
-  background-color: lightblue;
-  width: 100%;
-  padding: 2%;
-  border:  solid 1px ;
-  ;
-  
 
-}
 .Table_content{
   background-color: aquamarine;
-  border-bottom:  solid 1px; 
-  padding: 50px;
 
 }

@@ -17,7 +17,7 @@ const navigate = useNavigate()
 const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault()
 
-   if (!name || !last_name ||  !village || !lekgotla || !id_number  || !contact_number || !formError) {
+   if (!name || !last_name ||  !village || !lekgotla || !id_number  || !contact_number ) {
        setFormError("Please fill in all required fields")
        return
    }
@@ -43,7 +43,6 @@ if(data){
   console.error(error)
   setFormError("An error occurred while submitting the form")
 }
-
 
 }
 
@@ -87,25 +86,13 @@ if(data){
             className="Create_Input"
             onChange={(e)=>setLekgotla(e.target.value)}/>
 
-<label htmlFor="id_number">ID:</label>
-<input
-    type="text"
-    id="id_number"
-    value={id_number}
-    className="Create_Input"
-    onChange={(e) => {
-        const inputID = e.target.value;
-        
-        if (inputID.length !== 13) {
-            // Show an error message or provide visual feedback to the user
-            // You can set an error state or display an error message near the input field.
-        } else {
-            // Input has exactly 13 digits, update the state
-            setId_number(inputID);
-        }
-    }}
-/>
-
+            <label htmlFor="id_number">ID:</label>
+            <input
+            type="text"
+            id="id_number"
+            value={id_number}
+            className="Create_Input"
+            onChange={(e)=> setId_number(e.target.value)}/>
 
             <label htmlFor="contact_number">Contact Number :</label>
             <input
@@ -114,6 +101,8 @@ if(data){
             value={contact_number}
             className="Create_Input"
             onChange={(e)=> setContact_number(e.target.value)}/>
+
+            
 
             <button>Add New Person</button>
                 {formError && <p>{formError}</p>}
