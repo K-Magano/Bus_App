@@ -1,69 +1,157 @@
 
-
-
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
+  background-olor: Black;
+  display: flexbox;
+  max-width: 1300px;
+  min-width: 300px;
+  margin:  auto;
   padding: 2rem;
   text-align: center;
+}
+ 
+@media (screen and (min-width: 768px)){
+  #root {
+    max-width: 768px;
+  }
+}
+
+.App_Heading{
+  color:#fffff
 }
 
 .App_Nav{
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width:100%;
-  margin-right: 100%;
-  background-color:lightgreen;
+   flex-direction: column;
+   align-items: center;
+   width:100%;
+   background-color: #26c914;
   
+}
+
+@media (screen and (max-width: 768px)){
+  .App_Nav{
+    flex-direction: row;
+  }
+}
+.Nav_Art{
+  background-olor: aliceblue;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 50px;
+ 
+}
+
+@media (max-width: 768px) {
+  .Nav_Art {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+.CodeLab_Logo{
+  width: auto;
+  height: 170px;
+  margin-left:200px;
+  margin-top: 50px;
+  
+}
+
+.CodeLab_Logo:hover {
+  filter: drop-shadow(0 0 2em #f7d707);
+  
+}
+
+@media (max-width: 768px) {
+  .CodeLab_Logo {
+    width: 100px;
+    height: 90px;
+    margin-left: 0;
+    margin-top:80px;
+  }
+}
+
+.RBH_Logo{
+  width:auto;
+  height: 180px;
+  margin-right: 100px;
+  margin-top: 40px;
+
+}
+
+.RBH_Logo:hover {
+  filter: drop-shadow(0 0 2em #f7d707);
+}
+
+@media (max-width: 768px) {
+  .RBH_Logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 0;
+    margin-top: 80px;
+  }
+}
+
+.App_Heading{
+  background-olor: aqua;
+  padding-left: 50px;
+  padding-right: 50px;
+ 
 }
 .App_Link{
    display: flex;
-  ; 
-    }
+  background-olor: #ffff; 
+  font-size: large;
+  }
+
 .App_Nav_Link{
   display:flex;
- 
   justify-content: space-between;
-  
   padding: 9px;
   margin: 10px;
-  ;
+  background-olor: #61dafbaa;
 }
+
+
+
 .Home_Button_Container{
   display: flex;
   justify-content: space-between;
+  background-olor: #646cffaa;
+  margin-bottom: 20px;
 }
-.Home_Buttons{
-  
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 9px;
-  margin: 10px;
-    
 
+@media (max-width: 768px) {
+  .Home_Button_Container {
+    flex-direction: column;
+  }
 }
+
+.Home_Buttons{
+   margin: 10px;
+  background-olor: violet;
+    }
 
 .Create_Form{
-
- 
-  padding: 20px;
-  margin: 20px;
-  background-color: aquamarine;
-
+  background-olor: aquamarine;
+   
 }
 
 .Create_Input{
-  background-color: grey;
+  background-color: white;
+  display: flex;
   border: none;
   border-radius: 5px;
-  margin:15px;
+  border-bottom: solid 1px #26c914;
+  margin-left:40%;
+  margin-bottom: 10px;
   padding:10px;
   cursor: pointer;
 }
 
+.Create_Button{
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
 /*Buttons color :
  hover color:
  not Hover: Dark Green*/
@@ -73,51 +161,37 @@
   will-change: filter;
   transition: filter 300ms;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
 
-.card {
-  padding: 2em;
-}
 
-.read-the-docs {
-  color: #888;
-}
 
 .Table {
-  background-color: #888;
-  width: 100%;
+  background-olor: #888;
+  max-width: 500px;
+  min-width: 300px;
   border:  solid 1px ;
-  table-layout: fixed;  
-    
-}
-
-.Table_Header{
-  background-color: Pink;
+  table-layout: fixed;
+  border-radius: 9px;  
+ 
+ 
   
 }
 
+table th{
+  background-color: #26c914;
+  grid-template-rows: auto;
+  color: #ffff;
 
-.Table_content{
-  background-color: aquamarine;
+  padding-left: 50px;
+  padding-right:60px;
+ 
+}
+
+table tbody{
+  backgrond-color: rgb(214, 18, 18);
+  border: solid 10px #0000;
 
 }
+
+

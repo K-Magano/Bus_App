@@ -15,7 +15,7 @@ interface PassengerData {
 const Home = () => {
   const [fetchError, setFetchError] = useState<string | null>(null);
   const [passenger, setPassenger] = useState<PassengerData[] | null>(null);
-  const [created, setCreated] = useState("created_at");
+const [created, setCreated] = useState("created_at");
   const handleDelete = (id: number) => {
     setPassenger((prevPassenger) =>
       prevPassenger.filter((passenger) => passenger.id !== id)
@@ -50,8 +50,10 @@ const Home = () => {
       {fetchError && <p>{fetchError}</p>}
       {passenger && (
         <div>
+             
           <div className="Home_Button_Container">
             <p>Sort by :</p>
+         
             <button
               className="Home_Buttons"
               onClick={() => setCreated("created_at")}
@@ -80,6 +82,7 @@ const Home = () => {
               Lekgotla
             </button>
           </div>
+          
           <table className="Table">
             <thead className="Table_Header">
               <tr>
