@@ -16,11 +16,13 @@ const Home = () => {
   const [fetchError, setFetchError] = useState<string | null>(null);
   const [passenger, setPassenger] = useState<PassengerData[] | null>(null);
 const [created, setCreated] = useState("created_at");
+
   const handleDelete = (id: number) => {
     setPassenger((prevPassenger) =>
       prevPassenger.filter((passenger) => passenger.id !== id)
     );
   };
+  
   useEffect(() => {
     const fetchPassenger = async () => {
       try {

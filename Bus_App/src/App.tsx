@@ -24,8 +24,8 @@ function App() {
         <Link to="/" className='App_Nav_Link' >Home</Link>
       <Link to="/Create" className='App_Nav_Link'>Create New Person</Link>
       </div>
-      
-      
+
+     
      </nav>
      <Routes>
      <Route path='/' element={<Home />} />
@@ -33,7 +33,7 @@ function App() {
       <Route path="/:id" element ={<Update/>}/>
      </Routes>
     </BrowserRouter>
-      
+        
     </>
   )
 }
