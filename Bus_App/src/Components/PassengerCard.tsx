@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import supabase from "../confiig/SupabaseClient";
+import supabase from "../config/SupabaseClient";
 
 interface PassengerProps {
   passenger: {
@@ -35,27 +35,22 @@ const PassengerCard = ({ passenger, onDelete }: PassengerProps) => {
     }
   };
   return (
-  
-<tr key={passenger.id} className="Table_content">
-        <td>{passenger.name}</td>
-        <td>{passenger.last_name}</td>
-        <td>{passenger.lekgotla}</td>
-        <td>{passenger.village}</td>
-        <td>{passenger.contact_number}</td>
-        <td>{passenger.id_number}</td>
-        <td>
-          <Link to={"/" + passenger.id}>Edit</Link>
-        </td>
-        <td>
-          {" "}
-          <button onClick={handleDelete}>Delete</button>
-        </td>
-      </tr>
-
-     
-
+    <tr key={passenger.id} className='Table_content'>
+      <td>{passenger.name}</td>
+      <td>{passenger.last_name}</td>
+      <td>{passenger.lekgotla}</td>
+      <td>{passenger.village}</td>
+      <td>{passenger.contact_number}</td>
+      <td>{passenger.id_number}</td>
+      <td>
+        <Link to={"/" + passenger.id}>Edit</Link>
+      </td>
+      <td>
+        {" "}
+        <button onClick={handleDelete}>Delete</button>
+      </td>
+    </tr>
   );
 };
-
 
 export default PassengerCard;

@@ -1,44 +1,41 @@
-
 #root {
   background-olor: Black;
   display: flexbox;
   max-width: 1300px;
   min-width: 300px;
-  margin:  auto;
+  margin: auto;
   padding: 2rem;
   text-align: center;
 }
- 
-@media (screen and (min-width: 768px)){
+
+@media (screen and (min-width: 768px)) {
   #root {
     max-width: 768px;
   }
 }
 
-.App_Heading{
-  color:#fffff
+.App_Heading {
+  color: #fffff;
 }
 
-.App_Nav{
+.App_Nav {
   display: flex;
-   flex-direction: column;
-   align-items: center;
-   width:100%;
-   background-color: #26c914;
-  
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #26c914;
 }
 
-@media (screen and (max-width: 768px)){
-  .App_Nav{
+@media (screen and (max-width: 768px)) {
+  .App_Nav {
     flex-direction: row;
   }
 }
-.Nav_Art{
+.Nav_Art {
   background-olor: aliceblue;
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   gap: 50px;
- 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
 }
 
 @media (max-width: 768px) {
@@ -47,18 +44,15 @@
   }
 }
 
-
-.CodeLab_Logo{
+.CodeLab_Logo {
   width: auto;
   height: 170px;
-  margin-left:200px;
+  margin-left: 200px;
   margin-top: 50px;
-  
 }
 
 .CodeLab_Logo:hover {
   filter: drop-shadow(0 0 2em #f7d707);
-  
 }
 
 @media (max-width: 768px) {
@@ -66,16 +60,15 @@
     width: 100px;
     height: 90px;
     margin-left: 0;
-    margin-top:80px;
+    margin-top: 80px;
   }
 }
 
-.RBH_Logo{
-  width:auto;
+.RBH_Logo {
+  width: auto;
   height: 180px;
   margin-right: 100px;
   margin-top: 40px;
-
 }
 
 .RBH_Logo:hover {
@@ -91,29 +84,26 @@
   }
 }
 
-.App_Heading{
+.App_Heading {
   background-olor: aqua;
   padding-left: 50px;
   padding-right: 50px;
- 
 }
-.App_Link{
-   display: flex;
-  background-olor: #ffff; 
+.App_Link {
+  display: flex;
+  background-olor: #ffff;
   font-size: large;
-  }
+}
 
-.App_Nav_Link{
-  display:flex;
+.App_Nav_Link {
+  display: flex;
   justify-content: space-between;
   padding: 9px;
   margin: 10px;
   background-olor: #61dafbaa;
 }
 
-
-
-.Home_Button_Container{
+.Home_Button_Container {
   display: flex;
   justify-content: space-between;
   background-olor: #646cffaa;
@@ -126,29 +116,29 @@
   }
 }
 
-.Home_Buttons{
-   margin: 10px;
+.Home_Buttons {
+  margin: 10px;
   background-olor: violet;
-    }
-
-.Create_Form{
-  background-olor: aquamarine;
-   
 }
 
-.Create_Input{
+.Create_Form {
+  color: Black;
+}
+
+.Create_Input {
   background-color: white;
   display: flex;
   border: none;
   border-radius: 5px;
   border-bottom: solid 1px #26c914;
-  margin-left:40%;
+  margin-left: 40%;
   margin-bottom: 10px;
-  padding:10px;
+  padding: 10px;
   cursor: pointer;
+  color: black;
 }
 
-.Create_Button{
+.Create_Button {
   margin-bottom: 10px;
   margin-right: 20px;
 }
@@ -162,36 +152,23 @@
   transition: filter 300ms;
 }
 
-
-
-
-
 .Table {
-  background-olor: #888;
   max-width: 500px;
   min-width: 300px;
-  border:  solid 1px ;
+  border: solid 1px;
   table-layout: fixed;
-  border-radius: 9px;  
- 
- 
-  
+  border-radius: 9px;
 }
 
-table th{
+table th {
   background-color: #26c914;
   grid-template-rows: auto;
   color: #ffff;
 
   padding-left: 50px;
-  padding-right:60px;
- 
+  padding-right: 60px;
 }
 
-table tbody{
-  backgrond-color: rgb(214, 18, 18);
+table tbody {
   border: solid 10px #0000;
-
 }
-
-

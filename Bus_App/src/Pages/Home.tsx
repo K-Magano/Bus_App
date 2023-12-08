@@ -1,4 +1,4 @@
-import supabase from "../confiig/SupabaseClient";
+import supabase from "../config/SupabaseClient.tsx";
 import { useEffect, useState } from "react";
 //Components
 import PassengerCard from "../Components/PassengerCard.tsx";
@@ -15,14 +15,14 @@ interface PassengerData {
 const Home = () => {
   const [fetchError, setFetchError] = useState<string | null>(null);
   const [passenger, setPassenger] = useState<PassengerData[] | null>(null);
-const [created, setCreated] = useState("created_at");
+  const [created, setCreated] = useState("created_at");
 
   const handleDelete = (id: number) => {
     setPassenger((prevPassenger) =>
       prevPassenger.filter((passenger) => passenger.id !== id)
     );
   };
-  
+
   useEffect(() => {
     const fetchPassenger = async () => {
       try {
@@ -52,41 +52,40 @@ const [created, setCreated] = useState("created_at");
       {fetchError && <p>{fetchError}</p>}
       {passenger && (
         <div>
-             
-          <div className="Home_Button_Container">
+          <div className='Home_Button_Container'>
             <p>Sort by :</p>
-         
+
             <button
-              className="Home_Buttons"
+              className='Home_Buttons'
               onClick={() => setCreated("created_at")}
             >
               Time Created
             </button>
-            <button className="Home_Buttons" onClick={() => setCreated("name")}>
+            <button className='Home_Buttons' onClick={() => setCreated("name")}>
               Name
             </button>
             <button
-              className="Home_Buttons"
+              className='Home_Buttons'
               onClick={() => setCreated("last_name")}
             >
               Last name
             </button>
             <button
-              className="Home_Buttons"
+              className='Home_Buttons'
               onClick={() => setCreated("village")}
             >
               Village
             </button>
             <button
-              className="Home_Buttons"
+              className='Home_Buttons'
               onClick={() => setCreated("lekgotla")}
             >
               Lekgotla
             </button>
           </div>
-          
-          <table className="Table">
-            <thead className="Table_Header">
+
+          <table className='Table'>
+            <thead className='Table_Header'>
               <tr>
                 <th>Name</th>
                 <th>Last Name</th>
