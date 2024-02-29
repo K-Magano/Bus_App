@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "./Pages/Home";
 import Create from "./Pages/Create";
 import Update from "./Pages/Update";
+import Homie from "./Pages/Homie"
 
 function App() {
   return (
@@ -15,12 +16,12 @@ function App() {
           <div className='Nav_Art'>
             <img
               className='CodeLab_Logo'
-              src={"./public/Images/Bafokeng_Codelabtrans.png"}
+              src={"../Images/Bafokeng_Codelabtrans.png"}
             ></img>
             <h1 className='App_Heading'>Passenger Details</h1>
             <img
               className='RBH_Logo'
-              src={"./public/Images/RoyalBafokeng.png"}
+              src={"../Images/RoyalBafokeng.png"}
             ></img>
           </div>
 
@@ -39,7 +40,9 @@ function App() {
           <Route path='/:id' element={<Update />} />
         </Routes>
       </BrowserRouter>
+      <Homie />
     </>
+   
   );
 }
 
